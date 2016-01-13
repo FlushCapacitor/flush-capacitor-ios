@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="flushForiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAo-uc-te1" customClass="menoX" customModule="flushForiOS" customModuleProvider="target">
+                                <rect key="frame" x="16" y="0.0" width="144" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrb-Dw-IPe" customClass="menoX" customModule="flushForiOS" customModuleProvider="target">
+                                <rect key="frame" x="160" y="0.0" width="144" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nrb-Dw-IPe" secondAttribute="trailing" id="I2m-P1-IfO"/>
+                            <constraint firstItem="Nrb-Dw-IPe" firstAttribute="leading" secondItem="dAo-uc-te1" secondAttribute="trailing" id="TDc-5E-gfd"/>
+                            <constraint firstItem="Nrb-Dw-IPe" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Vue-pf-eDU"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="dAo-uc-te1" secondAttribute="bottom" id="W1e-KM-UAk"/>
+                            <constraint firstItem="dAo-uc-te1" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="m4J-ye-ImP"/>
+                            <constraint firstItem="dAo-uc-te1" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="nwS-Rd-xt1"/>
+                            <constraint firstItem="Nrb-Dw-IPe" firstAttribute="width" secondItem="dAo-uc-te1" secondAttribute="width" id="tMa-pP-icb"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="Nrb-Dw-IPe" secondAttribute="bottom" id="ypH-Tx-IiY"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="100"/>
+                    <connections>
+                        <outlet property="LeftStatus" destination="dAo-uc-te1" id="amw-Xj-TZn"/>
+                        <outlet property="RightStatus" destination="Nrb-Dw-IPe" id="ZN5-Qd-hte"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="284"/>
+        </scene>
+    </scenes>
+</document>
