@@ -359,19 +359,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5667E19414CD62D2C0E7E3BFB2BC8817 /* Release */ = {
+		29E99038F5EBAB780128E87CD0FB4FD5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ECE0EDA143E31A388308A211AFC00AD /* SocketRocket.xcconfig */;
+			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -416,6 +416,25 @@
 			};
 			name = Debug;
 		};
+		72709E82BAFD231969E7731D36C5A9E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A3A155AF69C55753AE0BC6C345002D1 /* Reachability.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -450,10 +469,29 @@
 			};
 			name = Release;
 		};
-		8C69759A632D06ACCAD40ABADB815BB0 /* Debug */ = {
+		96FD886FE55B098FDD03AE0B90C903B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B68D3010B70523F66E9CD66DAEEC14F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ECE0EDA143E31A388308A211AFC00AD /* SocketRocket.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -468,27 +506,11 @@
 			};
 			name = Debug;
 		};
-		9A58CE646C2518138CF430FD3E232BBA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A0A25448FF2FB7C3A28F76BDFAB12F67 /* Debug */ = {
+		B83F8C443875C85B1E6978C727278EB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A3A155AF69C55753AE0BC6C345002D1 /* Reachability.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -503,29 +525,13 @@
 			};
 			name = Debug;
 		};
-		BE83990B9FA23DC129B7457541F65C92 /* Release */ = {
+		E5D8BA29AD88A72AF6F8C306B58EB8B5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
+			baseConfigurationReference = 1ECE0EDA143E31A388308A211AFC00AD /* SocketRocket.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		CE5497AF470528134E8DFBB794A2BD3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A3A155AF69C55753AE0BC6C345002D1 /* Reachability.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -553,8 +559,8 @@
 		4244FA4F3604EEDD4E193DBCFD65B0D1 /* Build configuration list for PBXNativeTarget "Reachability" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A0A25448FF2FB7C3A28F76BDFAB12F67 /* Debug */,
-				CE5497AF470528134E8DFBB794A2BD3E /* Release */,
+				B83F8C443875C85B1E6978C727278EB4 /* Debug */,
+				72709E82BAFD231969E7731D36C5A9E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -562,8 +568,8 @@
 		46A77A852C91963788AFE599E9DD99BD /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9A58CE646C2518138CF430FD3E232BBA /* Debug */,
-				BE83990B9FA23DC129B7457541F65C92 /* Release */,
+				96FD886FE55B098FDD03AE0B90C903B3 /* Debug */,
+				29E99038F5EBAB780128E87CD0FB4FD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -571,8 +577,8 @@
 		96CE667F439A0A9CC271E7ED72253054 /* Build configuration list for PBXNativeTarget "SocketRocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C69759A632D06ACCAD40ABADB815BB0 /* Debug */,
-				5667E19414CD62D2C0E7E3BFB2BC8817 /* Release */,
+				B68D3010B70523F66E9CD66DAEEC14F3 /* Debug */,
+				E5D8BA29AD88A72AF6F8C306B58EB8B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
