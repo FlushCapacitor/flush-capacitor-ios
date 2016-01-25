@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -17,26 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dAo-uc-te1" customClass="menoX" customModule="flushForiOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="0.0" width="140" height="100"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nrb-Dw-IPe" customClass="menoX" customModule="flushForiOS" customModuleProvider="target">
+                                <rect key="frame" x="160" y="0.0" width="140" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nrb-Dw-IPe" customClass="menoX" customModule="flushForiOS" customModuleProvider="target">
-                                <rect key="frame" x="160" y="0.0" width="140" height="100"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dAo-uc-te1" customClass="menoX" customModule="flushForiOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="140" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <animations/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Nrb-Dw-IPe" secondAttribute="trailing" id="I2m-P1-IfO"/>
                             <constraint firstAttribute="trailing" secondItem="Nrb-Dw-IPe" secondAttribute="trailing" constant="50" id="MXO-I7-h6L"/>
                             <constraint firstItem="Nrb-Dw-IPe" firstAttribute="leading" secondItem="dAo-uc-te1" secondAttribute="trailing" id="TDc-5E-gfd"/>
                             <constraint firstItem="Nrb-Dw-IPe" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Vue-pf-eDU"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="dAo-uc-te1" secondAttribute="bottom" id="W1e-KM-UAk"/>
                             <constraint firstItem="dAo-uc-te1" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="50" id="fym-m2-oJE"/>
-                            <constraint firstItem="dAo-uc-te1" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="m4J-ye-ImP"/>
                             <constraint firstItem="dAo-uc-te1" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="nwS-Rd-xt1"/>
                             <constraint firstItem="Nrb-Dw-IPe" firstAttribute="width" secondItem="dAo-uc-te1" secondAttribute="width" id="tMa-pP-icb"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="Nrb-Dw-IPe" secondAttribute="bottom" id="ypH-Tx-IiY"/>

@@ -21,29 +21,20 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     var timer:NSTimer?
     
     func paint(button: UIView?, receivedStatus status: Bool? ) {
-        guard let color = button?.backgroundColor else {
+        guard let _ = button?.backgroundColor else {
+            print("ininitialized")
             return
         }
         
-        print("!!! \(status)")
         guard let s = status else {
-            if (color != kColorUnknown) {
-                print(987987)
-                button?.backgroundColor = kColorUnknown
-            }
+            button?.backgroundColor = kColorUnknown
             return
         }
         
-       if (s) {
-            if (color != kColorAvailable) {
-                print(987987)
-                button?.backgroundColor = kColorAvailable
-            }
-       } else {
-            if (color != kColorOccupied) {
-                print(987987)
-               	button?.backgroundColor = kColorOccupied
-            }
+        if (s) {
+            button?.backgroundColor = kColorAvailable
+        } else {
+        	button?.backgroundColor = kColorOccupied
         }
     }
 
@@ -61,7 +52,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
 		preferredContentSize = CGSizeMake(0, 50)
-        
+        RightStatus.layer.borderWidth = CGFloat(2)
+        LeftStatus.layer.borderWidth = CGFloat(2)
+
         fetchStatuses()
         timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "fetchStatuses", userInfo:nil, repeats: true)
     }
