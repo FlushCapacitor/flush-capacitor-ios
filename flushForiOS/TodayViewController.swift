@@ -46,7 +46,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             }
         }
     }
-    
 
     func displayStatus(statuses:[String:Bool]) {
         paint(LeftStatus, receivedStatus: statuses["L"])
@@ -59,23 +58,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
-    
-    var i = 0
-    func r() {
-        let c = [kColorUnknown, kColorOccupied, kColorTest, kColorAvailable]
-        i = i+1
-        LeftStatus?.backgroundColor = c[i % 4]
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //RightStatus.backgroundColor = kColorUnknown
-        //LeftStatus.backgroundColor = kColorUnknown
 		preferredContentSize = CGSizeMake(0, 50)
         
         fetchStatuses()
         timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "fetchStatuses", userInfo:nil, repeats: true)
-        
-        //NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "r", userInfo:nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning() {
