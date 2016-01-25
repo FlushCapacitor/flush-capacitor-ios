@@ -14,42 +14,56 @@ import Foundation
 class TodayViewController: UIViewController, NCWidgetProviding {
     var toilet = ToiletStatus()
     
-    let kColorUnknown = UIColor(white: 0.7, alpha: 1.0)
+    let kColorUnknown = UIColor.lightGrayColor()
     let kColorOccupied = UIColor(hue: 0/360.0, saturation: 0.7, brightness: 0.9, alpha: 1.0)
     let kColorAvailable = UIColor(hue: 120/360.0, saturation: 0.7, brightness: 0.9, alpha: 1.0)
-    
+    let kColorTest = UIColor(hue: 160/360.0, saturation: 0.7, brightness: 0.9, alpha: 1.0)
     var timer:NSTimer?
     
     func paint(button: UIView?, receivedStatus status: Bool? ) {
-        if let s = status {
-            if (s) {
-                button?.backgroundColor = kColorOccupied
-            } else {
-                button?.backgroundColor = kColorAvailable
-            }
-        } else {
-            button?.backgroundColor = kColorUnknown
+        guard let color = button?.backgroundColor else {
+            return
         }
         
+        print("!!! \(status)")
+        guard let s = status else {
+            if (color != kColorUnknown) {
+                print(987987)
+                button?.backgroundColor = kColorUnknown
+            }
+            return
+        }
+        
+       if (s) {
+            if (color != kColorAvailable) {
+                print(987987)
+                button?.backgroundColor = kColorAvailable
+            }
+       } else {
+            if (color != kColorOccupied) {
+                print(987987)
+               	button?.backgroundColor = kColorOccupied
+            }
+        }
     }
-    
-    func displayStatus() {
-        let statuses  = toilet.getStatuses()
+
+    func displayStatus(statuses:[String:Bool]) {
         paint(LeftStatus, receivedStatus: statuses["L"])
         paint(RightStatus, receivedStatus: statuses["R"])
-        
-        print ("testStatus-> \(toilet.getStatuses())")
+    }
+    
+    func fetchStatuses() {
+        dispatch_async(dispatch_get_main_queue()) {
+        	self.toilet.updateStatuses(self.displayStatus)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        displayStatus()
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "displayStatus", userInfo:nil, repeats: true)
-
-        RightStatus.backgroundColor = kColorUnknown
-        LeftStatus.backgroundColor = kColorUnknown
 		preferredContentSize = CGSizeMake(0, 50)
+        
+        fetchStatuses()
+        timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "fetchStatuses", userInfo:nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,7 +86,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
     
-
     @IBOutlet var LeftStatus: UIView!
     @IBOutlet var RightStatus: UIView!
     
